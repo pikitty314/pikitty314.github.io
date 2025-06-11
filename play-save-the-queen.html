@@ -20,7 +20,7 @@
                 <h1>SAVE THE QUEEN:</h1>
                 <h2>BEEHIVE DEFENSE</h2>
             </div>
-            <div class="container-fluid" style="display: block; border: 1px solid #d3d3d3; text-align:center; overflow:hidden;" id="gameDiv">
+            <div style="display: block; border: 1px solid #d3d3d3; text-align:center; overflow:hidden;" id="gameDiv">
                 <iframe src="https://www.greenfoot.org/scenarios/35279?embed=true" style="width: 1280px;height: 720px;border:3px solid black;" scrolling="no" id="gameFrame"></iframe>
             </div>
 
@@ -29,7 +29,8 @@
                 if (window.outerWidth < 1280)
                 {
                     console.log(innerWidth);
-                    document.getElementById("gameFrame").style.zoom = (window.outerWidth / 1310);
+                    document.getElementById("gameFrame").style.transform = "scale(" + (window.outerWidth / 1330) + ")";
+                    document.getElementById("gameFrame").style.transformOrigin = "left";
                     document.getElementById("gameDiv").style.display = "contents";
                 }
             </script>
